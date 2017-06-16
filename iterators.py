@@ -3,6 +3,8 @@
 # __next__() method to get the next item. When the iteration is done an
 # StopIteration exception is raised.
 
+#iterator always returns an iterable object....
+
 
 class Reverse:
     def __init__(self, name):
