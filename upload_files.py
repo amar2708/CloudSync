@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, send_file
 import os
 import urllib
-from crud_app import insert
+import crud_app
 
 app = Flask(__name__)
 
@@ -18,7 +18,7 @@ def home():
 def upload():
     files = request.files['img_name']
     files.save(os.path.join(app.config['UPLOAD_FOLDER'], "house.png"))
-    insert("house.png")
+    crud_app.insert_row("house.png")
     return "files uploaded successfully"
 
 @app.route('/download_images', methods=['GET'])
