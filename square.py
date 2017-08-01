@@ -1,4 +1,4 @@
-square(n):
+def square(n):
     return n*n
 
 x = [1,5,6,7]
